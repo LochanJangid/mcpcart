@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --orange: #ff7417;
+  --ink: #050505;
+  --paper: #ffffff;
+  --muted: #737373;
+  --line: #e8e8e8;
+  --soft: #f6f6f4;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: #0b0b0b;
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button, input { font: inherit; }
+
+button { cursor: pointer; }
+
+::selection {
+  background: #ff7417;
+  color: white;
+}
+
+.store-shell {
+  width: min(1160px, calc(100vw - 40px));
+  margin: 34px auto;
+  background: #fff;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.page-pad {
+  padding: 0 28px;
+}
+
+.section-title {
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: .98;
+  letter-spacing: -0.045em;
+  font-weight: 700;
+}
+
+.product-image {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
+
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { scrollbar-width: none; }
+
+@media (max-width: 760px) {
+  .store-shell {
+    width: calc(100vw - 18px);
+    margin: 9px auto;
+    border-radius: 18px;
+  }
+  .page-pad { padding: 0 16px; }
+}
